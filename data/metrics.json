@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-06-30",
+  "data_label": "Synthetic operational data",
+  "annualized_spend_eur": 255196244,
+  "ppv_eur": 15709169,
+  "on_time_rate_pct": 67.4,
+  "defect_rate_pct": 1.5,
+  "anomalies": 120,
+  "suppliers_for_review": 12,
+  "quality_checks_passed": 7
+}
