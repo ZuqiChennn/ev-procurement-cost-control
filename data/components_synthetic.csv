@@ -1,0 +1,11 @@
+component_id,component,commodity_family,standard_unit_cost_eur,commodity_exposure,energy_exposure
+CMP-000,Cathode active material,Lithium/Nickel,31.0,0.58,0.16
+CMP-001,Anode graphite,Graphite,9.4,0.47,0.13
+CMP-002,Cell casing,Aluminium,4.8,0.22,0.2
+CMP-003,Copper busbar,Copper,7.2,0.4,0.11
+CMP-004,Battery cell,Multi-material,74.0,0.52,0.18
+CMP-005,Battery management system,Electronics,118.0,0.08,0.09
+CMP-006,Thermal management plate,Aluminium,28.0,0.16,0.24
+CMP-007,Module housing,Aluminium,42.0,0.18,0.26
+CMP-008,High-voltage connector,Copper/Electronics,18.0,0.18,0.1
+CMP-009,Pack seal & insulation,Polymers,13.0,0.06,0.14
