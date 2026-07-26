@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EV Procurement & Cost Control Tower</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero"><div class="shell"><span class="eyebrow">EUROPEAN EV BATTERY VALUE CHAIN · INDEPENDENT CASE STUDY</span><h1>Procurement & Cost Control Tower</h1><p>Supplier risk, purchase-price variance, quality exceptions and commodity what-if analysis in one decision surface.</p><div id="freshness">Data as of 2026-06-30 · Synthetic operational data</div></div></header>
+  <main class="shell">
+    <section id="kpis" class="kpis">
+      <div class="kpi"><strong>€255.2M</strong><span>Annualized managed spend</span></div>
+      <div class="kpi"><strong>€15.7M</strong><span>Purchase-price variance</span></div>
+      <div class="kpi"><strong>67.4%</strong><span>On-time delivery rate</span></div>
+      <div class="kpi"><strong>1.5%</strong><span>Quantity-weighted defect rate</span></div>
+      <div class="kpi"><strong>120</strong><span>PO exceptions for review</span></div>
+    </section>
+    <section class="grid two">
+      <article class="card"><div class="head"><h2>Spend and standard cost</h2><p>Monthly EUR; actual versus standard</p></div><div id="trend">
+        <svg viewBox="0 0 620 285" class="chart" role="img" aria-label="Monthly actual and standard procurement spend">
+          <line x1="58" y1="247" x2="604" y2="247" class="gridline"/><line x1="58" y1="189" x2="604" y2="189" class="gridline"/><line x1="58" y1="131" x2="604" y2="131" class="gridline"/><line x1="58" y1="73" x2="604" y2="73" class="gridline"/>
+          <polyline points="58,99 108,128 158,111 207,125 257,97 306,117 356,92 405,47 455,99 504,70 554,80 604,92" class="line-a"/>
+          <polyline points="58,111 108,139 158,123 207,136 257,108 306,128 356,102 405,58 455,108 504,77 554,89 604,101" class="line-b"/>
+          <text x="58" y="272" class="label">2024-01</text><text x="330" y="272" text-anchor="middle" class="label">2024-07</text><text x="604" y="272" text-anchor="end" class="label">2024-12</text>
+        </svg>
+        <div style="font-size:12px;color:#66736f"><span style="color:#2f715d">●</span> Actual spend &nbsp; <span style="color:#d18b34">●</span> Standard cost</div>
+      </div></article>
+      <article class="card"><div class="head"><h2>Supplier risk queue</h2><p>Weighted delivery, quality, volatility and country-risk indicators</p></div><div id="risk">
+        <svg viewBox="0 0 480 285" class="chart" role="img" aria-label="Highest supplier risk scores">
+          <text x="108" y="31" text-anchor="end" class="label">Supplier A16</text><rect x="118" y="12" width="238" height="20" rx="4" class="bar escalate"/><text x="365" y="28" class="label">73.0</text>
+          <text x="108" y="65" text-anchor="end" class="label">Supplier A03</text><rect x="118" y="46" width="183" height="20" rx="4" class="bar review"/><text x="310" y="62" class="label">56.2</text>
+          <text x="108" y="99" text-anchor="end" class="label">Supplier B05</text><rect x="118" y="80" width="163" height="20" rx="4" class="bar review"/><text x="290" y="96" class="label">49.9</text>
+          <text x="108" y="133" text-anchor="end" class="label">Supplier A26</text><rect x="118" y="114" width="158" height="20" rx="4" class="bar review"/><text x="285" y="130" class="label">48.4</text>
+          <text x="108" y="167" text-anchor="end" class="label">Supplier B07</text><rect x="118" y="148" width="157" height="20" rx="4" class="bar review"/><text x="284" y="164" class="label">48.3</text>
+          <text x="108" y="201" text-anchor="end" class="label">Supplier A10</text><rect x="118" y="182" width="156" height="20" rx="4" class="bar review"/><text x="283" y="198" class="label">47.8</text>
+          <text x="108" y="235" text-anchor="end" class="label">Supplier B01</text><rect x="118" y="216" width="154" height="20" rx="4" class="bar review"/><text x="281" y="232" class="label">47.3</text>
+        </svg>
+      </div></article>
+    </section>
+    <section class="grid scenario">
+      <article class="card controls"><div class="head"><h2>Cost-shock scenario</h2><p>Illustrative annualized exposure, not a contract forecast.</p></div>
+        <label>Lithium / nickel price shock <b id="commodityLabel">+15%</b><input id="commodity" type="range" min="-20" max="50" value="15"></label>
+        <label>Industrial electricity shock <b id="energyLabel">+10%</b><input id="energy" type="range" min="-20" max="50" value="10"></label>
+        <div class="scenario-result"><span>Estimated spend impact</span><strong id="impact">+€17.0M / yr</strong></div>
+      </article>
+      <article class="card"><div class="head"><h2>Component exposure</h2><p>Current annualized spend and modelled commodity/energy sensitivity</p></div><div id="components"></div></article>
+    </section>
+    <section class="card"><div class="head"><h2>Exception review queue</h2><p>Robust multivariate prioritization with an interpretable primary reason.</p></div><div class="table-wrap"><table><thead><tr><th>PO</th><th>Supplier</th><th>Component</th><th>Spend</th><th>Price var.</th><th>Delay</th><th>Defects</th><th>Reason</th></tr></thead><tbody id="exceptions"></tbody></table></div></section>
+    <section class="card method"><h2>Governance boundary</h2><p>All operational records are synthetic. The anomaly model flags records for review and does not establish misconduct. Production use requires effective-dated contract data, controlled supplier access, owner-approved thresholds and reconciliation to finance.</p></section>
+  </main>
+  <footer><div class="shell">Portfolio project by Zuqi Chen · Synthetic supplier data · No BMW Group affiliation</div></footer>
+  <script src="assets/dashboard-data.js"></script><script src="assets/app.js"></script>
+</body>
+</html>
